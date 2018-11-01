@@ -4,6 +4,11 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
-  def create
+  def new
+    @artist= Artist.new
+  end
 
+  def create
+    @artist =
+  end
 end
