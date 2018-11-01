@@ -24,10 +24,11 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
-    @artist.update()
+    @artist.update(artist_params)
   end
 
   private
     def artist_params
+      params.require(:artist).permit(:name, :bio)
     end
 end
