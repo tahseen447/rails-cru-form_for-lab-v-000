@@ -9,6 +9,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist =
+    @artist = Artist.new(params[:artist].require)
+
   end
 end
