@@ -16,6 +16,5 @@ class ArtistsController < ApplicationController
     @artist = Artist.new(params[:artist])
     @artist.save
     redirect_to artist_path(@artist)
-
   end
 end
